@@ -14,6 +14,13 @@
 		146C66FBC983015DBAC62FBA /* libPods-screenshare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3357DCE5C7102ACE469B2E4B /* libPods-screenshare.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DA7FBD10F38A8F6B807A9911 /* libPods-screenshare-screenshareTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1EB1CE3C10E08CD5F04210 /* libPods-screenshare-screenshareTests.a */; };
+		F15D512E273FDA5000C68DD5 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15D512D273FDA5000C68DD5 /* ReplayKit.framework */; };
+		F15D5131273FDA5000C68DD5 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D5130273FDA5000C68DD5 /* SampleHandler.swift */; };
+		F15D5135273FDA5000C68DD5 /* broadcast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F15D512C273FDA5000C68DD5 /* broadcast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F15D513B273FDB0D00C68DD5 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D513A273FDB0D00C68DD5 /* Atomic.swift */; };
+		F15D513D273FDB3700C68DD5 /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D513C273FDB3700C68DD5 /* DarwinNotificationCenter.swift */; };
+		F15D5140273FDD7900C68DD5 /* SampleUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D513F273FDD7900C68DD5 /* SampleUploader.swift */; };
+		F15D5142273FDE8300C68DD5 /* SocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D5141273FDE8300C68DD5 /* SocketConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +31,28 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = screenshare;
 		};
+		F15D5133273FDA5000C68DD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15D512B273FDA5000C68DD5;
+			remoteInfo = broadcast;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F15D5136273FDA5000C68DD5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F15D5135273FDA5000C68DD5 /* broadcast.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* screenshareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = screenshareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +72,15 @@
 		D59DCB0174FDC723AA32F884 /* Pods-screenshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-screenshare.debug.xcconfig"; path = "Target Support Files/Pods-screenshare/Pods-screenshare.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F15D5115273FD68500C68DD5 /* screenshare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = screenshare.entitlements; path = screenshare/screenshare.entitlements; sourceTree = "<group>"; };
+		F15D512C273FDA5000C68DD5 /* broadcast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = broadcast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15D512D273FDA5000C68DD5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		F15D5130273FDA5000C68DD5 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		F15D5132273FDA5000C68DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15D513A273FDB0D00C68DD5 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		F15D513C273FDB3700C68DD5 /* DarwinNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarwinNotificationCenter.swift; sourceTree = "<group>"; };
+		F15D513E273FDBF500C68DD5 /* broadcast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = broadcast.entitlements; sourceTree = "<group>"; };
+		F15D513F273FDD7900C68DD5 /* SampleUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUploader.swift; sourceTree = "<group>"; };
+		F15D5141273FDE8300C68DD5 /* SocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketConnection.swift; sourceTree = "<group>"; };
 		FE1EB1CE3C10E08CD5F04210 /* libPods-screenshare-screenshareTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-screenshare-screenshareTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +98,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				146C66FBC983015DBAC62FBA /* libPods-screenshare.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15D5129273FDA5000C68DD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15D512E273FDA5000C68DD5 /* ReplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +149,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				3357DCE5C7102ACE469B2E4B /* libPods-screenshare.a */,
 				FE1EB1CE3C10E08CD5F04210 /* libPods-screenshare-screenshareTests.a */,
+				F15D512D273FDA5000C68DD5 /* ReplayKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +167,7 @@
 				13B07FAE1A68108700A75B9A /* screenshare */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* screenshareTests */,
+				F15D512F273FDA5000C68DD5 /* broadcast */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A1FCF01573218D5FAD3FDAA4 /* Pods */,
@@ -135,6 +182,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* screenshare.app */,
 				00E356EE1AD99517003FC87E /* screenshareTests.xctest */,
+				F15D512C273FDA5000C68DD5 /* broadcast.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +196,20 @@
 				8204D151872AA8E7527A4668 /* Pods-screenshare-screenshareTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F15D512F273FDA5000C68DD5 /* broadcast */ = {
+			isa = PBXGroup;
+			children = (
+				F15D5130273FDA5000C68DD5 /* SampleHandler.swift */,
+				F15D5132273FDA5000C68DD5 /* Info.plist */,
+				F15D513A273FDB0D00C68DD5 /* Atomic.swift */,
+				F15D513C273FDB3700C68DD5 /* DarwinNotificationCenter.swift */,
+				F15D513E273FDBF500C68DD5 /* broadcast.entitlements */,
+				F15D513F273FDD7900C68DD5 /* SampleUploader.swift */,
+				F15D5141273FDE8300C68DD5 /* SocketConnection.swift */,
+			);
+			path = broadcast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,15 +248,34 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				1FF011EDFB1091B23D2B5C89 /* [CP] Embed Pods Frameworks */,
 				603F4936EDDC2F10297D94C9 /* [CP] Copy Pods Resources */,
+				F15D5136273FDA5000C68DD5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F15D5134273FDA5000C68DD5 /* PBXTargetDependency */,
 			);
 			name = screenshare;
 			productName = screenshare;
 			productReference = 13B07F961A680F5B00A75B9A /* screenshare.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F15D512B273FDA5000C68DD5 /* broadcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15D5139273FDA5000C68DD5 /* Build configuration list for PBXNativeTarget "broadcast" */;
+			buildPhases = (
+				F15D5128273FDA5000C68DD5 /* Sources */,
+				F15D5129273FDA5000C68DD5 /* Frameworks */,
+				F15D512A273FDA5000C68DD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = broadcast;
+			productName = broadcast;
+			productReference = F15D512C273FDA5000C68DD5 /* broadcast.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -202,6 +283,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -210,6 +292,9 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					F15D512B273FDA5000C68DD5 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
@@ -228,6 +313,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* screenshare */,
 				00E356ED1AD99517003FC87E /* screenshareTests */,
+				F15D512B273FDA5000C68DD5 /* broadcast */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +332,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15D512A273FDA5000C68DD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +510,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F15D5128273FDA5000C68DD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15D513B273FDB0D00C68DD5 /* Atomic.swift in Sources */,
+				F15D5140273FDD7900C68DD5 /* SampleUploader.swift in Sources */,
+				F15D513D273FDB3700C68DD5 /* DarwinNotificationCenter.swift in Sources */,
+				F15D5131273FDA5000C68DD5 /* SampleHandler.swift in Sources */,
+				F15D5142273FDE8300C68DD5 /* SocketConnection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -424,6 +529,11 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* screenshare */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		F15D5134273FDA5000C68DD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15D512B273FDA5000C68DD5 /* broadcast */;
+			targetProxy = F15D5133273FDA5000C68DD5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -483,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D59DCB0174FDC723AA32F884 /* Pods-screenshare.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = screenshare/screenshare.entitlements;
@@ -511,6 +622,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65D6E656C17D87EB930B1C9C /* Pods-screenshare.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = screenshare/screenshare.entitlements;
@@ -658,6 +770,84 @@
 			};
 			name = Release;
 		};
+		F15D5137273FDA5000C68DD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = broadcast/broadcast.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7ZJJ5R8W8K;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = broadcast/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = broadcast;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vemarav.screenshare.broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F15D5138273FDA5000C68DD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = broadcast/broadcast.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7ZJJ5R8W8K;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = broadcast/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = broadcast;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vemarav.screenshare.broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -684,6 +874,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F15D5139273FDA5000C68DD5 /* Build configuration list for PBXNativeTarget "broadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15D5137273FDA5000C68DD5 /* Debug */,
+				F15D5138273FDA5000C68DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

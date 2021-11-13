@@ -32,6 +32,14 @@
 	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow microphose for speaking</string>
+	<key>RTCAppGroupIdentifier</key>
+	<string>group.com.vemarav.screenshare.appgroup</string>
+	<key>RTCScreenSharingExtension</key>
+	<string>com.vemarav.screenshare.broadcast</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>voip</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

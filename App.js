@@ -1,33 +1,49 @@
 import React, {useState} from 'react';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import {
-  Button,
   View,
   StyleSheet,
   StatusBar,
+  findNodeHandle,
+  NativeModules,
+  TouchableOpacity,
+  Text,
 } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { mediaDevices, RTCView } from 'react-native-webrtc';
+import { 
+  mediaDevices, 
+  RTCView, 
+  ScreenCapturePickerView,
+} from 'react-native-webrtc';
 
 const App = () => {
+  const screenCaptureView = React.useRef(null);
   const [stream, setStream] = useState(null);
+
+  const startBroadcast = async () => {
+    const reactTag = findNodeHandle(screenCaptureView.current);
+    return NativeModules.ScreenCapturePickerViewManager.show(reactTag);
+  }
+
+  const startStream = async () => {
+    const _stream = await mediaDevices.getDisplayMedia({ video: true });
+    setStream(_stream);
+  }
+
   const start = async () => {
-    console.log('start');
-    if (!stream) {
-      let s;
-      try {
-        s = await mediaDevices.getDisplayMedia({ video: true });
-        console.log (s.toURL ());
-        setStream(s);
-      } catch(e) {
-        console.error(e);
-      }
+    try {
+      await startBroadcast();
+      await startStream();
+    } catch (error) {
+      console.error(error);
+      alert('Failed to start!'); 
     }
   };
+
   const stop = () => {
-    console.log('stop');
     stream?.release();
     setStream(null);
   };
+
   return (
     <>
       <StatusBar hidden />
@@ -41,14 +57,19 @@ const App = () => {
               />
             ) : null
           }
+          <ScreenCapturePickerView ref={screenCaptureView}/>
         </View>
         <View style={styles.footer}>
-          <Button
-            title = "Start"
-            onPress = {start} />
-          <Button
-            title = "Stop"
-            onPress = {stop} />
+          <TouchableOpacity onPress={start}>
+            <View style={styles.btn}>
+              <Text style={styles.btnTxt}>Start</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={stop}>
+            <View style={styles.btn}>
+              <Text style={styles.btnTxt}>Stop</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </>
@@ -56,15 +77,11 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  body: {
-    backgroundColor: Colors.white,
-    ...StyleSheet.absoluteFill,
-  },
-  stream: { flex: 1 },
-  footer: {
-    backgroundColor: Colors.lighter,
-    paddingBottom: 30,
-  },
+  body: {backgroundColor: Colors.dark, ...StyleSheet.absoluteFill},
+  stream: { flex: 1, padding: 44 },
+  footer: {width: '100%', flexDirection: 'row', justifyContent: 'space-evenly', paddingBottom: 30},
+  btn: {paddingHorizontal: 50, paddingVertical: 10, backgroundColor: '#0275d8', borderRadius: 5},
+  btnTxt: {color: Colors.white, textAlign: 'center', fontSize: 20}
 });
 
 export default App;
