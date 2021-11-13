@@ -52,6 +52,7 @@ const App = () => {
           {stream ?
             ( 
               <RTCView
+                objectFit={'contain'}
                 streamURL={stream.toURL()}
                 style={styles.stream}
               />
