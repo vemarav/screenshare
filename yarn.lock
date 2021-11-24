@@ -5232,6 +5232,11 @@ react-native-codegen@^0.0.7:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
+react-native-is-captured@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-is-captured/-/react-native-is-captured-0.1.2.tgz#2ef0a76b3924a108d898f6df0baea5c2f8a6006e"
+  integrity sha512-9dK2BwDtG4ava0sCLw9lddbQ0rBMsQh95XY8EtiaEkLjinOqj8LVy5DCcxhw8aJPV/4pjgjn1pg6ugZirNcwcg==
+
 react-native-webrtc@^1.92.2:
   version "1.92.2"
   resolved "https://registry.yarnpkg.com/react-native-webrtc/-/react-native-webrtc-1.92.2.tgz#56c808f0e5f7f89bce46182b5d70a5e813bbdae3"
